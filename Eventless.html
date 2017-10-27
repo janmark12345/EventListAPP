@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    
+<center>
+<br><br>
+
+ 
+<script>	
+	function Save(){
+
+window.localStorage['Events'] = document.getElementById('Events') .value;
+document.getElementById('Events').value=null
+window.localStorage['Month'] = document.getElementById('Month') .value;
+document.getElementById('Month').value=null
+	
+window.localStorage['Day'] = document.getElementById('Day') .value;
+document.getElementById('day').value=null
+
+window.localStorage['drop'] = document.getElementById('drop') .value;
+
+}
+</script>
+<center>
+
+<fieldset>
+
+<h1 align="center">Eventless</h1>
+	<label>Events &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="Events" placeholder="Enter Events"></label><br>
+	<br>
+	<label>Month &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="Month" placeholder="Enter Month"></label><br>
+	<br>
+	<label>Day: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="Day" placeholder="Enter Day:"></label><br>
+	<br>
+	
+
+	What is the Event?:<div>
+<select name="mydropdown" id="drop">
+<option value="Birthday" id="Bornday">Birthday</option>
+<option value="New Year" id="New Year">New Year</option>
+<option value="Christmas" id="Christmas">Christmas</option>
+</select>
+</div>
+
+<br><br>
+<input type="submit" value="Save" onclick="Save()">
+
+</fieldset>
+</center>
+</body>
+</html>
